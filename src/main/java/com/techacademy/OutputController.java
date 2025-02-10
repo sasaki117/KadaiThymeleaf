@@ -9,11 +9,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class OutputController {
 
     @PostMapping("/output")
-    public String postOutput(@RequestParam("inputValue") String inputValue,
-                             @RequestParam(value = "previous", required = false) String previous,
-                             Model model) {
+    public String postOutput(@RequestParam("inputValue") String inputValue, Model model) {
         model.addAttribute("inputValue", inputValue);
-        model.addAttribute("previous", previous);
         return "output";
     }
 }
