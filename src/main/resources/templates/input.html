@@ -11,9 +11,7 @@
     <p th:if="${previous != null}" th:text="'前回入力された値は「'+(${previous})+'」でした。'"></p>
     <form action="/output" method="post">
         <input type="text" name="inputValue">
-        <button type="submit">送信</button>
+        <button type="submit" th:text="#{content.submit}"></button>
     </form>
-
-
 </body>
 </html>
